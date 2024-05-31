@@ -1,0 +1,23 @@
+@layer utilities {
+    .scrollbar::-webkit-scrollbar {
+        @apply w-3;
+        @apply h-3;
+    }
+
+    .scrollbar::-webkit-scrollbar-track {
+        @apply rounded-xl;
+        @apply bg-slate-100;
+    }
+
+    .scrollbar::-webkit-scrollbar-thumb {
+        @apply bg-slate-700;
+        @apply rounded-xl;
+        @apply border;
+        @apply border-solid;
+        @apply border-slate-100;
+    }
+
+    .scrollbar::-webkit-scrollbar-thumb:hover {
+        @apply bg-slate-600;
+    }
+}

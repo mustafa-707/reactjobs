@@ -1,12 +1,27 @@
-import NavBar from "../components/NavBar.jsx";
+import HomePage from "../pages/Home.jsx";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
+import MainLayout from "../layout/Main.jsx";
+import JobsPage from "../pages/Jobs.jsx";
+import AddJobsPage from "../pages/AddJobs.jsx";
+import NotFoundPage from "../pages/NotFound.jsx";
 
 function App() {
-  return (
-    <>
-      <NavBar />
-      <div>App</div>
-    </>
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path="/" element={<MainLayout />}>
+        <Route index element={<HomePage />} />
+        <Route path="*" element={<NotFoundPage />} />
+        <Route path="/jobs" element={<JobsPage />} />
+        <Route path="/add-job" element={<AddJobsPage />} />
+      </Route>
+    )
   );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

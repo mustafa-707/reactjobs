@@ -1,0 +1,21 @@
+.hero-container {
+  @apply bg-slate-700 py-20 mb-4;
+}
+
+.hero-align {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center;
+}
+
+.hero-text {
+  @apply text-center;
+}
+
+
+.hero-title {
+  @apply text-4xl font-extralight text-white sm:text-5xl md:text-6xl;
+}
+
+.hero-description {
+  @apply my-4 text-xl text-white;
+
+}

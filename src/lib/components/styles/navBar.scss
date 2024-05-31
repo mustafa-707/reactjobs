@@ -1,0 +1,78 @@
+.navbar {
+  @apply bg-slate-700;
+  @apply border-b;
+  @apply border-slate-500;
+  // @apply fixed top-0 w-full items-center justify-between shadow-md lg:flex-wrap lg:justify-start;
+}
+
+.logo {
+  @apply h-10;
+  @apply w-auto;
+  @apply rounded-full xs:me-6;
+}
+
+.alignment {
+  @apply mx-auto;
+  @apply max-w-7xl;
+  @apply px-2;
+  @apply sm:px-6;
+  @apply lg:px-8;
+}
+
+.justafier {
+  @apply flex;
+  @apply h-20;
+  @apply items-center;
+  @apply justify-between;
+}
+
+.center {
+  @apply flex;
+  @apply flex-1;
+  @apply items-center;
+  @apply justify-center;
+  @apply md:items-stretch;
+  @apply md:justify-start;
+}
+
+.navlink {
+  @apply flex;
+  @apply flex-shrink-0;
+  @apply items-center;
+  @apply mr-4;
+}
+
+.sitename {
+  @apply hidden;
+  @apply md:block;
+  @apply text-white;
+  @apply text-2xl;
+  @apply font-bold;
+  @apply ml-2;
+}
+
+.gap {
+  @apply md:ml-auto;
+}
+
+.spacer {
+  @apply flex space-x-2;
+}
+
+.unSelectedBtn {
+  @apply text-white;
+  @apply hover:bg-gray-900 opacity-40;
+  @apply rounded-md;
+  @apply px-3;
+  @apply py-2;
+}
+
+.selectedBtn {
+  @apply text-white;
+  @apply bg-black;
+  @apply hover:bg-gray-900;
+  @apply hover:text-white;
+  @apply rounded-md;
+  @apply px-3;
+  @apply py-2;
+}

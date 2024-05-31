@@ -1,12 +1,34 @@
 import logo from "../../assets/react.png";
+import { NavLink } from "react-router-dom";
 
 function NavBar() {
+  const navLinker = ({ isActive }) =>
+    isActive ? "selectedBtn" : "unSelectedBtn";
   return (
     <>
-      <div className="flex items-center  space-x-2">
-        <img className="h-10 w-auto" src={logo}></img>
-        <p> React Jobs</p>
-      </div>
+      <nav className="navbar">
+        <div className="alignment">
+          <div className="justafier">
+            <div className="center">
+              <img className="logo" src={logo} alt="React Jobs"></img>
+              <span className="sitename"> React Jobs</span>
+              <div className="gap">
+                <div className="spacer">
+                  <NavLink className={navLinker} to="/">
+                    Home
+                  </NavLink>
+                  <NavLink className={navLinker} to="/jobs">
+                    Jobs
+                  </NavLink>
+                  <NavLink className={navLinker} to="/add-job">
+                    Add Job
+                  </NavLink>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
     </>
   );
 }

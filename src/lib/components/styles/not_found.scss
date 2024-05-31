@@ -1,0 +1,19 @@
+.not-found-section {
+    @apply text-center flex flex-col justify-center items-center h-96;
+}
+
+.not-found-icon {
+    @apply mb-4 text-yellow-400 text-6xl;
+}
+
+.not-found-title {
+    @apply text-6xl font-bold mb-4;
+}
+
+.not-found-text {
+    @apply text-xl mb-5;
+}
+
+.not-found-btn {
+    @apply bg-slate-700 text-white font-bold py-2 px-3 rounded mt-4 hover:bg-slate-900;
+}
