@@ -1,13 +1,15 @@
 // Base CSS
 @import "tailwindcss/base";
 @import "./lib/styles/global.scss";
+@import "./lib/pages/styles/not_found.scss";
+@import "./lib/pages/styles/jobs.scss";
+
 // Components
 @import "tailwindcss/components";
 @import "./lib/components/styles/navBar.scss";
 @import "./lib/components/styles/hero.scss";
 @import "./lib/components/styles/card.scss";
 @import "./lib/components/styles/job_lists.scss";
-@import "./lib/components/styles/not_found.scss";
 // Utilities
 @import "tailwindcss/utilities";
 @import "./lib/styles/utils.scss";

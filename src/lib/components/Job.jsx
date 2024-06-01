@@ -29,7 +29,7 @@ const Job = ({ job }) => {
           <div className="job-location">
             <FaMapMarker className="job-location-icon" /> {job.location}
           </div>
-          <Link to={`/job/${job.id}`} className="job-link">
+          <Link to={`/jobs/${job.id}`} className="job-link">
             Read More
           </Link>
         </div>

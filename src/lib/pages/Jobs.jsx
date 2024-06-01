@@ -1,7 +1,11 @@
-import React from "react";
+import JobListings from "../components/JobListings";
 
 const JobsPage = () => {
-  return <div>Jobs</div>;
+  return (
+    <section className="jobs-section">
+      <JobListings />
+    </section>
+  );
 };
 
 export default JobsPage;
