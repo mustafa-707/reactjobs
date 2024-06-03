@@ -9,6 +9,9 @@
   @apply h-10;
   @apply w-auto;
   @apply rounded-full xs:me-6;
+  @apply fill-white;
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
 }
 
 .alignment {
@@ -46,9 +49,11 @@
   @apply hidden;
   @apply md:block;
   @apply text-white;
+  @apply justify-center;
   @apply text-2xl;
   @apply font-bold;
   @apply ml-2;
+
 }
 
 .gap {

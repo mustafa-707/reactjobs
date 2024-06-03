@@ -1,19 +1,28 @@
 import { FaArrowLeft, FaMapMarker } from "react-icons/fa";
-import { Link, useLoaderData } from "react-router-dom";
-const JobPage = () => {
+import { Link, useLoaderData, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+const JobPage = ({ deleteJob }) => {
   const job = useLoaderData();
-
+  const Navigate = useNavigate;
+  const onDeleteClick = async (id) => {
+    const shouldDelete = window.confirm("Are you sure?");
+    if (!shouldDelete) return;
+    deleteJob(id);
+    toast.success("Job deleted successfully");
+    Navigate("/jobs");
+  };
   return (
     <>
-      <section className="container m-auto py-6 px-6">
-        <Link
-          to="/jobs"
-          className="text-indigo-500 hover:text-indigo-600 flex items-center"
-        >
-          <FaArrowLeft className="mr-2" /> Back to Job Listings
-        </Link>
+      <section>
+        <div className="container m-auto py-6 px-6">
+          <Link
+            to="/jobs"
+            className="text-indigo-500 hover:text-indigo-600 flex items-center"
+          >
+            <FaArrowLeft className="mr-2" /> Back to Job Listings
+          </Link>
+        </div>
       </section>
-
       <section className="bg-indigo-50">
         <div className="container m-auto py-10 px-6">
           <div className="grid grid-cols-1 md:grid-cols-70/30 w-full gap-6">
@@ -62,7 +71,6 @@ const JobPage = () => {
                 <h3 className="text-xl">Contact Phone:</h3>
 
                 <p className="my-2 bg-indigo-100 p-2 font-bold">
-                  {" "}
                   {job.company.contactPhone}
                 </p>
               </div>

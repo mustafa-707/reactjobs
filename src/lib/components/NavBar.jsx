@@ -10,8 +10,10 @@ function NavBar() {
         <div className="alignment">
           <div className="justafier">
             <div className="center">
-              <img className="logo" src={logo} alt="React Jobs"></img>
-              <span className="sitename"> React Jobs</span>
+              <NavLink to="/" className="navlink">
+                <img className="logo" src={logo} alt="React Jobs"></img>
+                <span className="sitename"> React Jobs</span>
+              </NavLink>
               <div className="gap">
                 <div className="spacer">
                   <NavLink className={navLinker} to="/">
