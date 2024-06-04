@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { useNavigate, useParams, useLoaderData } from "react-router-dom";
 import { toast } from "react-toastify";
+import { updateJob } from "../apis/JobRepository.jsx";
 
-const EditJobsPage = ({ updateJobSubmit }) => {
+const EditJobsPage = () => {
   const job = useLoaderData();
 
   const [title, setTitle] = useState(job.title);
@@ -19,7 +20,6 @@ const EditJobsPage = ({ updateJobSubmit }) => {
 
   const navigate = useNavigate();
   const { id } = useParams();
-  const ids = useParams();
 
   const submitForm = (e) => {
     e.preventDefault();
@@ -37,7 +37,7 @@ const EditJobsPage = ({ updateJobSubmit }) => {
         contactPhone,
       },
     };
-    updateJobSubmit(updatedJob);
+    updateJob(updatedJob);
     toast.success("Job updated successfully");
     return navigate("/jobs");
   };

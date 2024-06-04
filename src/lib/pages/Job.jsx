@@ -1,7 +1,9 @@
 import { FaArrowLeft, FaMapMarker } from "react-icons/fa";
 import { Link, useLoaderData, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-const JobPage = ({ deleteJob }) => {
+import { deleteJob } from "../apis/JobRepository.jsx";
+
+const JobPage = () => {
   const job = useLoaderData();
   const Navigate = useNavigate;
   const onDeleteClick = async (id) => {

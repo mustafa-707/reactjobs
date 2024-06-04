@@ -2,8 +2,9 @@ import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { addJob } from "../apis/JobRepository.jsx";
 
-const AddJobsPage = ({ addJobSubmit }) => {
+const AddJobsPage = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [type, setType] = useState("Full-Time");
@@ -31,7 +32,7 @@ const AddJobsPage = ({ addJobSubmit }) => {
         contactPhone,
       },
     };
-    addJobSubmit(newJob);
+    addJob(newJob);
     toast.success("Job added successfully");
     return navigate("/jobs");
   };
